@@ -1,0 +1,29 @@
+# Build do Rust
+/target/
+
+# Backups gerados pelo rustfmt
+**/*.rs.bk
+
+# Debug / perfilamento
+*.pdb
+*.profraw
+perf.data*
+flamegraph.svg
+
+# Editores e IDEs
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Sistema
+.DS_Store
+Thumbs.db
+
+# Variáveis de ambiente locais
+.env
+
+# Seus JSONs de dados (podem ser grandes ou privados).
+# Se a pasta Links estiver dentro do projeto, não versione ela:
+/Links/
