@@ -774,7 +774,7 @@ fn config_path() -> Option<PathBuf> {
         .filter(|v| !v.is_empty())
         .map(PathBuf::from)
         .or_else(|| std::env::var_os("HOME").map(|h| PathBuf::from(h).join(".config")))?;
-    Some(base.join("json-browser").join("selection.json"))
+    Some(base.join("dlbrowse-hydra").join("selection.json"))
 }
 
 fn load_saved() -> Vec<PathBuf> {
@@ -1149,14 +1149,14 @@ fn start(
 
 fn print_help() {
     println!(
-        "json-browser — navegador de JSON no terminal
+        "dlbrowse-hydra — navegador leve de fontes JSON do Hydra no terminal
 
 USO:
-  json-browser                  abre usando a seleção lembrada (ou o seletor na 1ª vez)
-  json-browser <arq|pasta>...   usa esses caminhos e passa a lembrar deles
-  json-browser --select         abre o seletor de arquivos antes de iniciar
-  json-browser --clear          apaga a memória e abre o seletor
-  json-browser --help
+  dlbrowse-hydra            abre usando a seleção lembrada (ou o seletor na 1ª vez)
+  dlbrowse-hydra <arq|pasta>... usa esses caminhos e passa a lembrar deles
+  dlbrowse-hydra --select      abre o seletor de arquivos antes de iniciar
+  dlbrowse-hydra --clear       apaga a memória e abre o seletor
+  dlbrowse-hydra --help
 
 Dentro do app, a tecla 'f' reabre o seletor.
 Memória salva em: {}",
